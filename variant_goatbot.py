@@ -2212,7 +2212,7 @@ def handle_command(text):
         tg_send("❤️ Heartbeat ricevuto. Tutto ok!")
         return
 
-    # --- /status ---
+# --- /status ---
 # --- /status ---
 elif t == "/status":
     counts = state["daily_counts"]
