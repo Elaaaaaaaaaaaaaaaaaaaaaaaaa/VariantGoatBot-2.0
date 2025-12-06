@@ -2213,26 +2213,61 @@ def handle_command(text):
         return
 
     # --- /status ---
-    elif t == "/status":
-        counts = state["daily_counts"]
-        tg_send(
-            "📊 *Stato del bot*\n"
-            "----------------------\n"
-            "🟢 Attivo e in esecuzione\n"
-            "🌍 Fonti monitorate:\n"
-            "   • Panini Italia 🇮🇹\n"
-            "   • Panini Francia 🇫🇷\n"
-            "   • Star Comics 🇮🇹\n"
-            "   • J-POP 🇮🇹\n"
-            "----------------------\n"
-            f"📅 *Oggi*:\n"
-            f"🇮🇹 Panini IT: {counts['PANINI']}\n"
-            f"🇫🇷 Panini FR: {counts['PANINI_FR']}\n"
-            f"⭐ Star Comics: {counts['STAR']}\n"
-            f"📚 J-POP: {counts['J-POP']}\n",
-            parse_mode="Markdown"
-        )
-        return
+# --- /status ---
+elif t == "/status":
+    counts = state["daily_counts"]
+
+    msg = "📊 *Stato del bot*\n"
+    msg += "------------------------\n"
+    msg += "🟢 Attivo e in esecuzione\n"
+    msg += "🌍 Fonti monitorate:\n"
+
+    # 🇮🇹 ITALIA
+    msg += "\n🇮🇹 *Italia*\n"
+    msg += "• Panini IT\n"
+    msg += "• Star Comics\n"
+    msg += "• J-POP\n"
+    msg += "• Norma (IT import)\n"
+    msg += "• Ivrea IT\n"
+
+    # 🇫🇷 FRANCIA
+    msg += "\n🇫🇷 *Francia*\n"
+    msg += "• Panini FR\n"
+    msg += "• Pika\n"
+    msg += "• Kana\n"
+    msg += "• Ki-oon\n"
+    msg += "• Kurokawa\n"
+
+    # 🇩🇪 GERMANIA
+    msg += "\n🇩🇪 *Germania*\n"
+    msg += "• Panini DE\n"
+    msg += "• Carlsen\n"
+    msg += "• Tokyopop DE\n"
+
+    # 🇪🇸 SPAGNA
+    msg += "\n🇪🇸 *Spagna*\n"
+    msg += "• Planeta Comic\n"
+    msg += "• MilkyWay ES\n"
+    msg += "• Panini ES\n"
+
+    msg += "\n------------------------\n"
+    msg += "📅 *Oggi:*\n"
+    msg += f"🇮🇹 Panini IT: {counts['PANINI']}\n"
+    msg += f"🇫🇷 Panini FR: {counts['PANINI_FR']}\n"
+    msg += f"⭐ Star Comics: {counts['STAR']}\n"
+    msg += f"🇯🇵 J-POP: {counts['J-POP']}\n"
+
+    # Puoi aggiungere anche questi se hai i contatori:
+    # msg += f"🇩🇪 Panini DE: {counts['PANINI_DE']}\n"
+    # msg += f"🇪🇸 Panini ES: {counts['PANINI_ES']}\n"
+    # msg += f"🇪🇸 MilkyWay ES: {counts['MILKYWAY']}\n"
+    # msg += f"🇪🇸 Planeta: {counts['PLANETA']}\n"
+    # msg += f"🇩🇪 Carlsen: {counts['CARLSEN']}\n"
+    # msg += f"🇩🇪 Tokyopop DE: {counts['TOKYOPOP_DE']}\n"
+
+    tg_send(msg, parse_mode="Markdown")
+    return
+
 
     # --- /help ---
     elif t == "/help":
