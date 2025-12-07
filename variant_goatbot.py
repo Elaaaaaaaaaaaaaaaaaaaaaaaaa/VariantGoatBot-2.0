@@ -2252,10 +2252,31 @@ def handle_command(text):
 
         msg += "\n------------------------\n"
         msg += "📅 *Oggi:*\n"
-        msg += f"🇮🇹 Panini IT: {counts['PANINI']}\n"
-        msg += f"🇫🇷 Panini FR: {counts['PANINI_FR']}\n"
-        msg += f"⭐ Star Comics: {counts['STAR']}\n"
-        msg += f"🇯🇵 J-POP: {counts['J-POP']}\n"
+
+        # 🇮🇹 ITALIA
+        msg += f"🇮🇹 Panini IT: {counts.get('PANINI', 0)}\n"
+        msg += f"⭐ Star Comics: {counts.get('STAR', 0)}\n"
+        msg += f"🇯🇵 J-POP: {counts.get('J-POP', 0)}\n"
+        msg += f"🇮🇹 Norma (IT import): {counts.get('NORMA', 0)}\n"
+        msg += f"🇮🇹 Ivrea IT: {counts.get('IVREA', 0)}\n"
+
+        # 🇫🇷 FRANCIA
+        msg += f"🇫🇷 Panini FR: {counts.get('PANINI_FR', 0)}\n"
+        msg += f"🇫🇷 Pika: {counts.get('PIKA', 0)}\n"
+        msg += f"🇫🇷 Kana: {counts.get('KANA', 0)}\n"
+        msg += f"🇫🇷 Ki-oon: {counts.get('KIOON', 0)}\n"
+        msg += f"🇫🇷 Kurokawa: {counts.get('KURO', 0)}\n"
+
+        # 🇩🇪 GERMANIA
+        msg += f"🇩🇪 Panini DE: {counts.get('PANINI_DE', 0)}\n"
+        msg += f"🇩🇪 Carlsen: {counts.get('CARLSEN', 0)}\n"
+        msg += f"🇩🇪 Tokyopop DE: {counts.get('TOKYOPOP_DE', 0)}\n"
+
+        # 🇪🇸 SPAGNA
+        msg += f"🇪🇸 Planeta Comic: {counts.get('PLANETA', 0)}\n"
+        msg += f"🇪🇸 MilkyWay ES: {counts.get('MILKYWAY', 0)}\n"
+        msg += f"🇪🇸 Panini ES: {counts.get('PANINI_ES', 0)}\n"
+
 
         # Puoi aggiungere anche questi se hai i contatori:
         # msg += f"🇩🇪 Panini DE: {counts['PANINI_DE']}\n"
