@@ -2212,61 +2212,61 @@ def handle_command(text):
         tg_send("❤️ Heartbeat ricevuto. Tutto ok!")
         return
 
-# --- /status ---
-# --- /status ---
-elif t == "/status":
-    counts = state["daily_counts"]
+    # --- /status ---
+    # --- /status ---
+    elif t == "/status":
+        counts = state["daily_counts"]
 
-    msg = "📊 *Stato del bot*\n"
-    msg += "------------------------\n"
-    msg += "🟢 Attivo e in esecuzione\n"
-    msg += "🌍 Fonti monitorate:\n"
+        msg = "📊 *Stato del bot*\n"
+        msg += "------------------------\n"
+        msg += "🟢 Attivo e in esecuzione\n"
+        msg += "🌍 Fonti monitorate:\n"
 
-    # 🇮🇹 ITALIA
-    msg += "\n🇮🇹 *Italia*\n"
-    msg += "• Panini IT\n"
-    msg += "• Star Comics\n"
-    msg += "• J-POP\n"
-    msg += "• Norma (IT import)\n"
-    msg += "• Ivrea IT\n"
+        # 🇮🇹 ITALIA
+        msg += "\n🇮🇹 *Italia*\n"
+        msg += "• Panini IT\n"
+        msg += "• Star Comics\n"
+        msg += "• J-POP\n"
+        msg += "• Norma (IT import)\n"
+        msg += "• Ivrea IT\n"
 
-    # 🇫🇷 FRANCIA
-    msg += "\n🇫🇷 *Francia*\n"
-    msg += "• Panini FR\n"
-    msg += "• Pika\n"
-    msg += "• Kana\n"
-    msg += "• Ki-oon\n"
-    msg += "• Kurokawa\n"
+        # 🇫🇷 FRANCIA
+        msg += "\n🇫🇷 *Francia*\n"
+        msg += "• Panini FR\n"
+        msg += "• Pika\n"
+        msg += "• Kana\n"
+        msg += "• Ki-oon\n"
+        msg += "• Kurokawa\n"
 
-    # 🇩🇪 GERMANIA
-    msg += "\n🇩🇪 *Germania*\n"
-    msg += "• Panini DE\n"
-    msg += "• Carlsen\n"
-    msg += "• Tokyopop DE\n"
+        # 🇩🇪 GERMANIA
+        msg += "\n🇩🇪 *Germania*\n"
+        msg += "• Panini DE\n"
+        msg += "• Carlsen\n"
+        msg += "• Tokyopop DE\n"
 
-    # 🇪🇸 SPAGNA
-    msg += "\n🇪🇸 *Spagna*\n"
-    msg += "• Planeta Comic\n"
-    msg += "• MilkyWay ES\n"
-    msg += "• Panini ES\n"
+        # 🇪🇸 SPAGNA
+        msg += "\n🇪🇸 *Spagna*\n"
+        msg += "• Planeta Comic\n"
+        msg += "• MilkyWay ES\n"
+        msg += "• Panini ES\n"
 
-    msg += "\n------------------------\n"
-    msg += "📅 *Oggi:*\n"
-    msg += f"🇮🇹 Panini IT: {counts['PANINI']}\n"
-    msg += f"🇫🇷 Panini FR: {counts['PANINI_FR']}\n"
-    msg += f"⭐ Star Comics: {counts['STAR']}\n"
-    msg += f"🇯🇵 J-POP: {counts['J-POP']}\n"
+        msg += "\n------------------------\n"
+        msg += "📅 *Oggi:*\n"
+        msg += f"🇮🇹 Panini IT: {counts['PANINI']}\n"
+        msg += f"🇫🇷 Panini FR: {counts['PANINI_FR']}\n"
+        msg += f"⭐ Star Comics: {counts['STAR']}\n"
+        msg += f"🇯🇵 J-POP: {counts['J-POP']}\n"
 
-    # Puoi aggiungere anche questi se hai i contatori:
-    # msg += f"🇩🇪 Panini DE: {counts['PANINI_DE']}\n"
-    # msg += f"🇪🇸 Panini ES: {counts['PANINI_ES']}\n"
-    # msg += f"🇪🇸 MilkyWay ES: {counts['MILKYWAY']}\n"
-    # msg += f"🇪🇸 Planeta: {counts['PLANETA']}\n"
-    # msg += f"🇩🇪 Carlsen: {counts['CARLSEN']}\n"
-    # msg += f"🇩🇪 Tokyopop DE: {counts['TOKYOPOP_DE']}\n"
+        # Puoi aggiungere anche questi se hai i contatori:
+        # msg += f"🇩🇪 Panini DE: {counts['PANINI_DE']}\n"
+        # msg += f"🇪🇸 Panini ES: {counts['PANINI_ES']}\n"
+        # msg += f"🇪🇸 MilkyWay ES: {counts['MILKYWAY']}\n"
+        # msg += f"🇪🇸 Planeta: {counts['PLANETA']}\n"
+        # msg += f"🇩🇪 Carlsen: {counts['CARLSEN']}\n"
+        # msg += f"🇩🇪 Tokyopop DE: {counts['TOKYOPOP_DE']}\n"
 
-    tg_send(msg, parse_mode="Markdown")
-    return
+        tg_send(msg, parse_mode="Markdown")
+        return
 
 
     # --- /help ---
